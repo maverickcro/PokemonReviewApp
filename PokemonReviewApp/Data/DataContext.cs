@@ -21,6 +21,8 @@ namespace PokemonReviewApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //pravimo modelBuilder za many-to-many modele
+            //ovo moze biti apstracted ali kod je ispod
             modelBuilder.Entity<PokemonCategory>()
                     .HasKey(pc => new { pc.PokemonId, pc.CategoryId });
             modelBuilder.Entity<PokemonCategory>()
